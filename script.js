@@ -1,29 +1,42 @@
+
+
 const userCardTemplate = document.querySelector("[data-user-template]")
 const userCardContainer = document.querySelector("[data-user-cards-container]")
 const searchInput = document.querySelector("[data-search]")
 
-let users = []
+let products = []
 
 searchInput.addEventListener("input", e => {
   const value = e.target.value.toLowerCase()
-  users.forEach(user => {
+  products.forEach(products => {
     const isVisible =
-      user.name.toLowerCase().includes(value) ||
-      user.email.toLowerCase().includes(value)
-    user.element.classList.toggle("hide", !isVisible)
+      products.title.toLowerCase().includes(value) ||
+      products.type.toLowerCase().includes(value)
+
+    products.element.classList.toggle("hide", !isVisible)
   })
 })
 
-fetch("https://jsonplaceholder.typicode.com/users")
+
+fetch("./products.json")
   .then(res => res.json())
   .then(data => {
-    users = data.map(user => {
+    products = data.map(products => {
       const card = userCardTemplate.content.cloneNode(true).children[0]
       const header = card.querySelector("[data-header]")
       const body = card.querySelector("[data-body]")
-      header.textContent = user.name
-      body.textContent = user.email
+      const price = card.querySelector("[data-price]")
+      
+      header.textContent = products.title
+      body.textContent = products.type
+      price.textContent = products.price
+      
+      image= document.createElement('img')
+      image.src ="products.filename"
+      
+
       userCardContainer.append(card)
-      return { name: user.name, email: user.email, element: card }
+      return { title: products.title, type: products.type, price: products.price, element: card ,image:products.filename
+      }
     })
   })

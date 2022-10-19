@@ -2,6 +2,14 @@ html {
   box-sizing: border-box;
   font-size: 100%;
 }
+img{
+display: block;
+  
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
 
 *,*::before,*::after {
   box-sizing: inherit;
@@ -10,13 +18,13 @@ html {
 }
 
 h1{
-  color: purple;
+  color: crimson;
 }
 
 
 body {
   height: 100vh;
-  background-color: black;
+  background-image: url(./fundo2.jpg);
   font-family: 'Source Code Pro', monospace;
 }
 
@@ -49,28 +57,28 @@ body {
   width: 80px;
   height: 80px;
   background: none;
-  border: 4px solid purple;
+  border: 4px solid #40E0D0;
   border-radius: 50px;
   box-sizing: border-box;
   font-family: Comic Sans MS;
   font-size: 26px;
-  color: purple;
+  color: #40E0D0;
   outline: none;
   transition: .5s;
 }
 .box:hover input{
   width: 350px;
-  background: #3b3640;
+  background: salmon;
   border-radius: 10px;
 }
 .box i{
-  position: relative;
- 
-  
-  
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  right: 15px;
   transform: translate(-50%,-50%);
   font-size: 26px;
-  color: purple;
+  color: #40E0D0;
   transition: .2s;
 }
 .box:hover i{
@@ -90,16 +98,29 @@ input {
   pointer-events: none;
   
 }
+p{
+  background-color: salmon;
+  border-style: ridge;
+  border: 1px;
+  border-radius: 15px;
+  font-size: medium;
+  box-sizing: border-box;
+  width: 33%;
+  margin-left: auto;
+  margin-right: auto;
+  
+ 
+}
 
 .card {
   max-width: 15rem;
   color: #ffffffda;
   padding: 1.5rem;
-  background-color: #202022;
+  background-color: salmon;
   border: 1px;
   border-radius: 15px;
   border-style: ridge;
-  border-color: purple;
+  border-color: #40E0D0;
   
   pointer-events: auto;
   
@@ -129,6 +150,7 @@ input {
   color: #777;
 }
 .card > .price {
+  display: inline;
   font-size: .8rem;
   color: #777;
 }
@@ -143,4 +165,24 @@ input {
 
 .hide {
   display: none;
+}
+.fa-user-circle-o{
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  right: 15px;
+  transform: translate(-50%,-50%);
+  font-size: 26px;
+  color: #40E0D0;
+  transition: .2s;
+
+}
+#imgtag{
+  
+  
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+  
+  
 }

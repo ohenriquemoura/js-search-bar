@@ -19,6 +19,7 @@ searchInput.addEventListener("input", e => {
 
 
 fetch("./products.json")
+  
   .then(res => res.json())
   .then(data => {
     products = data.map(products => {
@@ -27,16 +28,25 @@ fetch("./products.json")
       const body = card.querySelector("[data-body]")
       const price = card.querySelector("[data-price]")
       
+      const imgtag = card.querySelector("[data-image]");
+      console.log(imgtag)
+      
+      
+    
+
+    
+      
+      imgtag.src = products.filename
+      
       header.textContent = products.title
       body.textContent = products.type
       price.textContent = products.price
       
-      image= document.createElement('img')
-      image.src ="products.filename"
+      
       
 
       userCardContainer.append(card)
-      return { title: products.title, type: products.type, price: products.price, element: card ,image:products.filename
+      return { title: products.title, type: products.type, price: products.price, element: card ,imgtag:products.filename
       }
     })
   })

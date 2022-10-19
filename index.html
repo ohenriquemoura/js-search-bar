@@ -12,11 +12,14 @@
 <body>
   <div class="box">
     <form name="search">
-        <input type="text" class="input" id="search" data-search name="txt" onmouseout="this.value = ''; this.blur();">
+        <input type="text" class="input" id="search" data-search name="txt" placeholder="Digite o nome do produto" onmouseout="this.value = ''; this.blur();">
     </form>
     <i class="fas fa-search"></i>
+   
+
 
 </div>
+
   
   <div class="container">
     <div class="cards" data-user-cards-container></div>
@@ -26,7 +29,8 @@
           <div class="header"  data-header></div>
           <div class="body" data-body></div>
           <div class="price" data-price></div>
-          <div class="image" data-image=""></div>
+          
+          <img src="" id="imgtag" data-image />
           <div class="link"> <a href="teste.html">Ver mais!</a></div>
       </div>
       

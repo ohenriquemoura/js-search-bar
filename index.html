@@ -7,9 +7,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  <title>Document</title>
+  <script src="mobile-navbar.js"></script>
+  <title>CIBUS</title>
 </head>
 <body>
+  <header>
+    <nav>
+      <a class="logo" href="/">CIBUS</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="teste.html">Início</a></li>
+        <li><a href="teste.html">Sobre</a></li>
+        <li><a href="teste.html">Parceiros</a></li>
+        <li><a href="teste.html">Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <div class="box">
     <form name="search">
         <input type="text" class="input" id="search" data-search name="txt" placeholder="Digite o nome do produto" onmouseout="this.value = ''; this.blur();">
